@@ -1,11 +1,13 @@
 #include "inversion_count.hpp"
 
+static bool is_base_case(unsigned int n);
+
 static void get_array_half(const int *a, int *part, unsigned int n, half which_half);
 
 //-----------------------------------------------------------------------------
 
 unsigned int get_inversions_number(const int *a, unsigned int n) {
-    if (n <= 1) {
+    if (is_base_case(n)) {
         return 0;
     }
 
@@ -22,6 +24,10 @@ unsigned int get_inversions_number(const int *a, unsigned int n) {
 }
 
 //-----------------------------------------------------------------------------
+
+bool is_base_case(unsigned int n) {
+    return n <= 1;
+}
 
 void get_array_half(const int *a, int *part, unsigned int n, half which_half) {
     unsigned int i{(which_half == half::LEFT)? 0 : n / 2};
