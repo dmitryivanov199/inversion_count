@@ -3,4 +3,9 @@
 
 unsigned int get_inversions_number(const int *a, unsigned int n);
 
+enum class half {
+    LEFT,
+    RIGHT
+};
+
 #endif //INVERSION_COUNT_HPP
