@@ -6,7 +6,7 @@ static void get_array_half(const int *a, int *part, unsigned int n, half which_h
 
 //-----------------------------------------------------------------------------
 
-unsigned int get_inversions_number(const int *a, unsigned int n) {
+unsigned int count_inversions(const int *a, unsigned int n) {
     if (is_base_case(n)) {
         return 0;
     }
