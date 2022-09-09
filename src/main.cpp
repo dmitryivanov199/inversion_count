@@ -18,10 +18,10 @@ int main () {
 }
 
 bool run_tests() {
-    const unsigned int tests_number{5};
-    const std::vector<std::vector<int>> a{{2}, {1, 2, 5, 4, 3}, {1, 2, 3, 4, 5, 6, 10, 9, 8, 7}, {2, 0}, {5, 7, 8, 8, 10, 23, 60}};
-    const std::array<unsigned int, tests_number> n{1, 5, 10, 2, 7};
-    const std::array<unsigned int, tests_number> correct_result{0, 3, 6, 1, 0};
+    const unsigned int tests_number{6};
+    const std::vector<std::vector<int>> a{{2}, {1, 2, 5, 4, 3}, {1, 2, 3, 4, 5, 6, 10, 9, 8, 7}, {2, 0}, {5, 7, 8, 8, 10, 23, 60}, {4, 8, -3, 73, 2, 7, 25, 1000}};
+    const std::array<unsigned int, tests_number> n{1, 5, 10, 2, 7, 8};
+    const std::array<unsigned int, tests_number> correct_result{0, 3, 6, 1, 0, 8};
     unsigned int result;
 
     for (unsigned int i{0}; i < tests_number; i++) {

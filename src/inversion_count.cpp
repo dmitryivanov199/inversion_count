@@ -40,8 +40,7 @@ unsigned int sort_and_count_inversions(int *a, unsigned int n) {
 
     unsigned int left_inversions_count{sort_and_count_inversions(c, c_n)};
     unsigned int right_inversions_count{sort_and_count_inversions(d, d_n)};
-    int b[n];
-    unsigned int split_inversions_count{merge_and_count_inversions(b, n, c, c_n, d, d_n)};
+    unsigned int split_inversions_count{merge_and_count_inversions(a, n, c, c_n, d, d_n)};
 
     return left_inversions_count + right_inversions_count + split_inversions_count;
 }
@@ -74,7 +73,7 @@ unsigned int merge_and_count_inversions(int *b, unsigned int n, const int *c, un
             else {
                 b[k] = d[j];
                 j++;
-                split_inversions_count += (c_n - i);
+                split_inversions_count += c_n - i;
             }
         }
         else {
