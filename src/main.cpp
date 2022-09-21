@@ -1,6 +1,4 @@
-#include <array>
 #include <iostream>
-#include <vector>
 
 #include "inversion_count.hpp"
 
